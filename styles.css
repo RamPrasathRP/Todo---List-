@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* Body Styles */
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Heading Styless */
+
+.neon-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff; /* The text color */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    position: absolute; /* Positioned absolutely within the body */
+    top: 10%; /* 10% from the top of the body */
+    left: 50%; /* Horizontally centered */
+    transform: translateX(-50%); /* Perfectly center the heading */
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+    text-shadow: 
+        0 0 10px #000, /* Black inner glow */
+        0 0 20px #000, 
+        0 0 30px #000, 
+        0 0 40px #ff7f00, /* Orange outer glow */
+        0 0 50px #ff7f00, 
+        0 0 60px #ff7f00, 
+        0 0 70px #ff7f00; /* Strong orange outer glow */
+}
+
+/* Animation for the neon effect */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 
+            0 0 10px #000, 
+            0 0 20px #000, 
+            0 0 30px #000, 
+            0 0 40px #ff7f00, 
+            0 0 50px #ff7f00, 
+            0 0 60px #ff7f00, 
+            0 0 70px #ff7f00;
+    }
+    50% {
+        text-shadow: 
+            0 0 15px #000, 
+            0 0 25px #000, 
+            0 0 35px #000, 
+            0 0 45px #ff7f00, 
+            0 0 55px #ff7f00, 
+            0 0 65px #ff7f00, 
+            0 0 75px #ff7f00;
+    }
+    100% {
+        text-shadow: 
+            0 0 20px #000, 
+            0 0 30px #000, 
+            0 0 40px #000, 
+            0 0 50px #ff7f00, 
+            0 0 60px #ff7f00, 
+            0 0 70px #ff7f00, 
+            0 0 80px #ff7f00;
+    }
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styles */
+#task-list {
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+/* Delete Button Styles */
+#task-list button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#task-list button:hover {
+    background-color: #c82333;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ff7f50; /* Change this to the color you want for the logo */
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 768px) {
+    .neon-heading {
+        font-size: 3rem; /* Reduce the size of the heading */
+        top: 5%; /* Adjust top spacing */
+    }
+    body {
+        padding: 10px;
+    }
+}
+
+/* Small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .neon-heading {
+        font-size: 2.5rem; /* Further reduce the heading size */
+        top: 5%; /* Keep it centered at the top */
+    }
+
+    form {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #task-input, button {
+        width: 100%; /* Make form elements take full width */
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        font-size: 0.9rem; /* Slightly reduce font size in footer */
+    }
+}
+
+/* Extra small screens (very small devices like old phones) */
+@media (max-width: 320px) {
+    .neon-heading {
+        font-size: 2rem; /* Even smaller heading */
+    }
+
+    #task-input, button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 0.8rem; /* Further reduce footer font */
+    }
+}
