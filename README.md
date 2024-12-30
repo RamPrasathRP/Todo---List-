@@ -15,15 +15,6 @@ A simple **To-Do List** application built using **HTML**, **CSS**, and **JavaScr
 - **CSS**: For styling the user interface and creating the neon glow effect.
 - **JavaScript**: For adding functionality to the To-Do List (adding and removing tasks).
 
-## Live Demo
 
-You can view the live demo of the To-Do List application at:  
-[Insert live demo link here if applicable]
 
-## Installation
 
-To run this project locally, follow these steps:
-
-1. **Clone the repository** to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/todo-list.git
